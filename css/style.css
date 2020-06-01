@@ -222,7 +222,7 @@ body {
       rgba(252, 227, 138, 0.9),
       rgba(243, 129, 129, 0.9)
     ),
-    url("../img/bg/bg.jpg") no-repeat center center;
+    url("./img/bg/bg.jpg") no-repeat center center;
   background-size: cover;
 
   padding-top: 210px;
@@ -328,22 +328,22 @@ body {
   padding-right: 19px;
 }
 .our-services__photography-icon::before {
-  background-image: url("../img/articles/photography.svg");
+  background-image: url("./img/articles/photography.svg");
 }
 .our-services__webdesign-icon::before {
-  background-image: url("../img/articles/wedesign.svg");
+  background-image: url("./img/articles/wedesign.svg");
 }
 .our-services__creativity-icon::before {
-  background-image: url("../img/articles/creativity.svg");
+  background-image: url("./img/articles/creativity.svg");
 }
 .our-services__seo-icon::before {
-  background-image: url("../img/articles/seo.svg");
+  background-image: url("./img/articles/seo.svg");
 }
 .our-services__htmlcss-icon::before {
-  background-image: url("../img/articles/htmlcss.svg");
+  background-image: url("./img/articles/htmlcss.svg");
 }
 .our-services__digital-icon::before {
-  background-image: url("../img/articles/digital.svg");
+  background-image: url("./img/articles/digital.svg");
 }
 .our-services__item::before {
   width: 32px;
@@ -366,7 +366,7 @@ body {
         rgba(252, 227, 138, 0.9),
         rgba(243, 129, 129, 0.9)
       ),
-      url("../img/bg/bg@2x.jpg") no-repeat center center;
+      url("./img/bg/bg@2x.jpg") no-repeat center center;
     background-size: cover;
   }
 }
