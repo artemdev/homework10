@@ -1,13 +1,6 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 @import url("https://fonts.googleapis.com/css?family=Roboto:300i,400&&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800,900&display=swap");
 @import url("https://use.typekit.net/wji0bht.css");
 
 /* animation */
@@ -27,26 +20,28 @@
     opacity: 1;
   }
 }
-/* veriables */
+/* variables */
 :root {
   --light-black: #333333;
   --pink: #f38181;
   --green: #95e1d3;
   --yellow: #fce38a;
   --grey: #999999;
+  --placeholder: #cccccc;
+  --input-border: #e7e7e7;
+  --icon-green: #1ea896;
 }
 * {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
+
 html,
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
-/* img {
-  display: block;
-} */
 
 .link {
   text-decoration: none;
@@ -56,15 +51,12 @@ body {
 
 .text {
   font-size: 0.9375rem;
-  color: #999999;
+  color: var(--grey);
   font-family: "Roboto", sans-serif;
 }
 
-.list {
-  list-style-type: none;
-}
 .break {
-  display: inline-block;
+  display: block;
 }
 
 .container {
@@ -86,7 +78,7 @@ body {
   position: relative;
 }
 
-.section-header {
+.section-heading {
   position: relative;
   display: block;
   width: 100%;
@@ -97,7 +89,7 @@ body {
   margin-bottom: 101px;
   text-transform: uppercase;
 }
-.section-header::after {
+.section-heading::after {
   position: absolute;
   margin-top: 37px;
   display: block;
@@ -108,10 +100,10 @@ body {
   right: 0;
   height: 3px;
   content: "";
-  background-color: #f38181;
+  background-color: var(--pink);
 }
 
-.section-header__span {
+.section-heading__span {
   font-family: "Kaushan Script", sans-serif;
   font-size: 1.5rem;
   display: block;
@@ -141,7 +133,6 @@ body {
   height: 50px;
 }
 .header__logo {
-  /* display: inline-flex; */
   font-size: 1.875rem;
   line-height: 30px;
   font-family: "Montserrat", sans-serif;
@@ -150,10 +141,6 @@ body {
   text-decoration: none;
   color: white;
   padding-top: 22px;
-}
-
-.header__icon {
-  width: 50%;
 }
 
 .header__menu {
@@ -167,10 +154,6 @@ body {
   height: 50px;
 }
 
-.header__menu:not(:last-child) {
-  margin-right: 0px;
-}
-
 .header__item {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -180,7 +163,6 @@ body {
   text-transform: uppercase;
   padding-top: 36px;
   width: 104px;
-  /* margin: 0 28px; */
 }
 
 .header__icon {
@@ -228,6 +210,21 @@ body {
   padding-bottom: 232px;
   margin-bottom: 41px;
 }
+
+@media (-webkit-min-device-pixel-ratio: 2),
+  (-o-min-device-pixel-ratio: 2/1),
+  (min-resolution: 192dpi) {
+  .wellcome {
+    background: -webkit-linear-gradient(
+        90deg,
+        rgba(252, 227, 138, 0.9),
+        rgba(243, 129, 129, 0.9)
+      ),
+      url("../img/bg/bg@2x.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}
+
 .wellcome__span,
 .wellcome__header {
   display: block;
@@ -311,7 +308,6 @@ body {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  /* margin: 0; */
   padding: 0;
 }
 
@@ -356,19 +352,7 @@ body {
 .our-services__text {
   padding-left: 60px;
 }
-@media (-webkit-min-device-pixel-ratio: 2),
-  (-o-min-device-pixel-ratio: 2/1),
-  (min-resolution: 192dpi) {
-  .wellcome {
-    background: -webkit-linear-gradient(
-        90deg,
-        rgba(252, 227, 138, 0.9),
-        rgba(243, 129, 129, 0.9)
-      ),
-      url("../img/bg/bg@2x.jpg") no-repeat center center;
-    background-size: cover;
-  }
-}
+
 .our-team {
   margin-bottom: 87px;
 }
@@ -398,7 +382,7 @@ body {
 .person__title {
   display: block;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.875rem;
   text-align: center;
   text-transform: uppercase;
@@ -411,7 +395,6 @@ body {
   font-weight: 300;
   font-style: italic;
   text-align: center;
-  /* margin-bottom: 81.5px; */
   font-size: 0.8125rem;
   color: var(--grey);
 }
@@ -506,7 +489,7 @@ body {
 }
 
 .person__hover-bg {
-  background-color: #95e1d3;
+  background-color: var(--green);
   position: absolute;
   top: 0;
   left: 0;
@@ -517,7 +500,7 @@ body {
 .social-icons-list {
   width: 224px;
   height: 56px;
-  background-color: #fce38a;
+  background-color: var(--yellow);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: -webkit-inline-box;
@@ -541,10 +524,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.social-icons-list__list:hover {
-  background-color: var(--green);
+  box-sizing: border-box;
 }
 
 .social-icons-list__item:last-child {
@@ -553,7 +533,7 @@ body {
 
 .social-icons-list__icon {
   display: block;
-  fill: #f38181;
+  fill: var(--pink);
   width: 26px;
   height: 21px;
 }
@@ -561,7 +541,7 @@ body {
   fill: white;
 }
 .social-icons-list__item:hover {
-  background-color: #f38181;
+  background-color: var(--pink);
 }
 
 .footer {
@@ -597,7 +577,7 @@ body {
   font-size: 0;
 }
 .footer .link {
-  color: #f38181;
+  color: var(--pink);
 }
 .subscribe-form__btn {
   background-color: var(--green);
@@ -620,35 +600,24 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 300;
   font-style: italic;
-  border: 1px solid #e7e7e7;
+  border: 1px solid var(--input-border);
 }
 .subscribe-form__text-input::-webkit-input-placeholder {
-  color: #cccccc;
+  color: var(--placeholder);
 }
 .subscribe-form__text-input::-moz-placeholder {
-  color: #cccccc;
+  color: var(--placeholder);
 }
 .subscribe-form__text-input:-ms-input-placeholder {
-  color: #cccccc;
+  color: var(--placeholder);
 }
 .subscribe-form__text-input::-ms-input-placeholder {
-  color: #cccccc;
+  color: var(--placeholder);
 }
 .subscribe-form__text-input::placeholder {
-  color: #cccccc;
+  color: var(--placeholder);
 }
 
 .subscribe-form__text-input:focus {
   outline-width: 0;
-}
-
-.icon {
-  width: 8rem;
-  height: 8rem;
-  cursor: pointer;
-  fill: #1ea896;
-}
-
-.social-icons-wrap_icon__icon:hover {
-  fill: rgba(255, 255, 255);
 }
