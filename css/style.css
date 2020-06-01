@@ -172,7 +172,7 @@ body {
   margin-right: 0px;
 }
 
-.header__link {
+.header__item {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 0.875rem;
@@ -190,11 +190,11 @@ body {
   text-align: right;
 }
 
-.header__link .link {
+.header__item .link {
   position: relative;
 }
 
-.header__link:hover .link:before {
+.header__item:hover .link:before {
   position: absolute;
   margin-top: 24px;
   display: block;
@@ -204,15 +204,15 @@ body {
   background-color: var(--yellow);
 }
 
-.header__link .link {
+.header__item .link {
   color: white;
 }
 
-.header__link .link:hover {
+.header__item .link:hover {
   color: var(--yellow);
 }
 
-.header__link--last {
+.header__item--last {
   margin-right: 0;
 }
 
