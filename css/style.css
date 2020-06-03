@@ -41,6 +41,7 @@ html,
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  /* width: 1920px; */
 }
 
 .link {
@@ -72,10 +73,6 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-.wrap {
-  width: 1920px;
-  position: relative;
 }
 
 .section-heading {
@@ -249,6 +246,7 @@ body {
   margin-bottom: 32px;
   line-height: 106px;
 }
+
 .wellcome__btn {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -289,7 +287,6 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  align-self: top;
   font-size: 0.875rem;
 }
 .our-services__list {
@@ -510,7 +507,7 @@ body {
   cursor: pointer;
 }
 
-.social-icons-list__item {
+.social-icons-list__link {
   width: 56px;
   height: 56px;
   border: 1px solid transparent;
@@ -527,20 +524,19 @@ body {
   box-sizing: border-box;
 }
 
-.social-icons-list__item:last-child {
+.social-icons-list__link--without-border {
   border-right-color: transparent;
 }
-
 .social-icons-list__icon {
   display: block;
   fill: var(--pink);
   width: 26px;
   height: 21px;
 }
-.social-icons-list__item:hover .social-icons-list__icon {
+.social-icons-list__link:hover .social-icons-list__icon {
   fill: white;
 }
-.social-icons-list__item:hover {
+.social-icons-list__link:hover {
   background-color: var(--pink);
 }
 
