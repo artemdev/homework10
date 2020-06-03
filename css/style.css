@@ -309,7 +309,6 @@ body {
 }
 
 .our-services__item {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 403.3px;
   margin-bottom: 92px;
@@ -319,23 +318,28 @@ body {
   padding-left: 92px;
   padding-right: 19px;
 }
-.our-services__photography-icon::before {
-  background-image: url("../img/articles/photography.svg");
+.our-services__icon {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 3px;
+  left: 31px;
+  /* transform: translate(0, 0); */
 }
 .our-services__webdesign-icon::before {
-  background-image: url("../img/articles/wedesign.svg");
+  background-image: url("../img/our-services-icons.svg#webdesign");
 }
 .our-services__creativity-icon::before {
-  background-image: url("../img/articles/creativity.svg");
+  background-image: url("../img/our-services-icons.svg#creativity");
 }
 .our-services__seo-icon::before {
-  background-image: url("../img/articles/seo.svg");
+  background-image: url("../img/our-services-icons.svg#seo");
 }
 .our-services__htmlcss-icon::before {
-  background-image: url("../img/articles/htmlcss.svg");
+  background-image: url("../img/our-services-icons.svg#htmlcss");
 }
 .our-services__digital-icon::before {
-  background-image: url("../img/articles/digital.svg");
+  background-image: url("../img/our-services-icons.svg#digital");
 }
 .our-services__item::before {
   width: 32px;
